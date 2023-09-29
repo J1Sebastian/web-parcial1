@@ -1,0 +1,15 @@
+.cafe-list {
+  cursor: pointer;
+}
+
+.cs-body {
+  text-align: center;
+  background-color: #e0bbbb33;
+}
+
+.cs-card {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 0;
+  border: 0;
+}
