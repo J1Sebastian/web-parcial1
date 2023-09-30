@@ -1,5 +1,13 @@
-error-cs {
+.error-cs {
   color: #cd3232 !important;
+  font-weight: bold;
+  margin-top: -15px;
+}
+
+.error-input{
+  background-color: #D9D9D9;
+  border-color: #6A0B0B;
+  border-radius: 0;
 }
 
 .cs-row {
@@ -7,21 +15,41 @@ error-cs {
   border-radius: 0;
   border-color: black;
   border-radius: 2px;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
 }
 
-.cs-big-row {
-  padding-left: 350px !important;
-  padding-right: 350px !important;
+.cs-card-body {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
 }
 
 .cs-row-sesion{
-  padding-left: 35px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  font-weight: 700;
 }
 
 .cs-input{
   background-color: #D9D9D9;
+  border: 0;
   border-radius: 0;
+}
+
+.cs-row-buttons{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cs-sign-button{
+  background-color: #8FA98F;
+  color: black;
+  font-weight: bold;
+  border-radius: 0;
+  border: 0;
+}
+
+.cs-logout-button{
+  color: black;
+  border-radius: 0;
+  font-weight: bold;
+  border: 0;
 }

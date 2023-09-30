@@ -1,4 +1,5 @@
-.App{
-  padding-left: 55px;
-  padding-bottom: 20px;
+.cs-app-container{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-family: 'Inter', sans-serif;
 }
