@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
+import { FormattedDate, FormattedMessage } from 'react-intl';
 import "./CafeList.css";
 
 function CafeList() {
@@ -30,10 +31,18 @@ function CafeList() {
                     <table className="table">
                         <thead>
                             <tr>
-                                <th className="cs-tr-titles">#</th>
-                                <th className="cs-tr-titles">Nombre</th>
-                                <th className="cs-tr-titles">Tipo</th>
-                                <th className="cs-tr-titles">Región</th>
+                                <th className="cs-tr-titles">
+                                    #
+                                </th>
+                                <th className="cs-tr-titles">
+                                    <FormattedMessage id="Name"></FormattedMessage>
+                                </th>
+                                <th className="cs-tr-titles">
+                                    <FormattedMessage id="Type"></FormattedMessage>
+                                </th>
+                                <th className="cs-tr-titles">
+                                    <FormattedMessage id="Region"></FormattedMessage>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,16 +62,27 @@ function CafeList() {
                         <Card className="cs-card">
                             <Card.Body className="cs-body">
                                 <Card.Title className='cs-cardTitle'>{selectedCafe.nombre}</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted cs-fecha">{selectedCafe.fecha_cultivo}</Card.Subtitle>
-                            
+                                <Card.Subtitle className="mb-2 text-muted cs-fecha">
+                                    {selectedCafe.fecha_cultivo === undefined ? <FormattedMessage id="No date"></FormattedMessage> :
+                                    <FormattedDate
+                                        value={new Date(selectedCafe.fecha_cultivo)}
+                                        year='numeric'
+                                        month='long'
+                                        day='numeric'
+                                        weekday='long'
+                                        timeZone='UTC'
+                                    />
+                                    }
+                                </Card.Subtitle>
+
                                 <div className="custom-img">
-                                    <Card.Img variant="top" src={selectedCafe.imagen} className='cs-img'/>
+                                    <Card.Img variant="top" src={selectedCafe.imagen} className='cs-img' />
                                 </div>
-                                
+
                                 <div className="mb-3">
                                     <Row>
                                         <Card.Text>
-                                            Notas
+                                            <FormattedMessage id="Notes"></FormattedMessage>
                                         </Card.Text>
                                     </Row>
                                     <Row>
@@ -74,12 +94,12 @@ function CafeList() {
                                 <div className="mb-2 custom-text">
                                     <Row>
                                         <Card.Text>
-                                            Cultivado a una altura de
+                                            <FormattedMessage id="Cultivated at an altitude of"></FormattedMessage>
                                         </Card.Text>
                                     </Row>
                                     <Row>
                                         <Card.Text>
-                                            {selectedCafe.altura} msnm
+                                            {selectedCafe.altura} <FormattedMessage id="masl"></FormattedMessage>
                                         </Card.Text>
                                     </Row>
                                 </div>
