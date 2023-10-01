@@ -1,3 +1,7 @@
+.cs-tb-row{
+  padding-left: 0.28rem;
+}
+
 .cafe-list {
   cursor: pointer;
 }
@@ -5,11 +9,47 @@
 .cs-body {
   text-align: center;
   background-color: #e0bbbb33;
+  padding: 0;
+}
+
+.cs-cardTitle{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: 5px;
 }
 
 .cs-card {
-  width: 18rem;
-  height: 18rem;
+  max-width: 20rem;
   border-radius: 0;
-  border: 0;
+  border: 2px solid black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cs-id{
+  font-weight: bold;
+  padding-right: 30px !important;
+}
+
+.cs-tr-titles{
+  background-color: #333A40 !important;
+  color: white !important;
+}
+
+.cs-fecha{
+  font-size: 14px;
+}
+
+.custom-text{
+  font-weight: 1000;
+}
+
+.custom-img{
+  max-width: 100%;
+  height: auto;
+}
+
+.cs-img{
+  width: 45%;
+  height: auto;
 }

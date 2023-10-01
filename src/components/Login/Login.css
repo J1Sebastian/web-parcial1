@@ -15,6 +15,7 @@
   border-radius: 0;
   border-color: black;
   border-radius: 2px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .cs-card-body {
@@ -25,7 +26,7 @@
 
 .cs-row-sesion{
   padding-bottom: 10px;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .cs-input{
@@ -48,6 +49,7 @@
 }
 
 .cs-logout-button{
+  background-color: #E75D5D;
   color: black;
   border-radius: 0;
   font-weight: bold;

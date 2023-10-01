@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
@@ -34,14 +33,14 @@ function Login() {
     }
 
     const handleCancel = (e) => {
+        window.location.href = "/";
     }
 
     return (
         <>
             <div className="centered-card">
-                <Container>
                     <Row className="justify-content-center align-items-center">
-                        <Col xs={12} md={9} xl={6} xxl={6}>
+                        <Col xs={11} md={9} xl={6} xxl={6}>
                             <div className='cs-row-sesion'>Inicio de sesion</div>
                             <Card className="cs-row">
                                 <Card.Body className="cs-card-body">
@@ -67,7 +66,7 @@ function Login() {
                                     </Row>
                                     <Row className="cs-row-buttons">
                                         <Col xs={6} md={6}>
-                                            <button className="btn btn-primary mb-2 cs-sign-button w-100" onClick={handleSubmit}>Ingresar</button>
+                                            <button className="btn btn-success mb-2 cs-sign-button w-100" onClick={handleSubmit}>Ingresar</button>
                                         </Col>
                                         <Col xs={6} md={6} className="text-end">
                                             <button className="btn btn-danger mb-2 cs-logout-button w-100" onClick={handleCancel}>Cancelar</button>
@@ -80,12 +79,10 @@ function Login() {
                                             </Col>
                                         </Row>
                                     }
-
                                 </Card.Body>
                             </Card>
                         </Col>
                     </Row>
-                </Container>
             </div >
         </>
     );
